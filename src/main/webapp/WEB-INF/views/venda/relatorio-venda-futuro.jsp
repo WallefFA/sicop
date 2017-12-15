@@ -12,9 +12,15 @@
 		<table>
 			<tr>
 				<th>Valor de Venda</th>
-				<th>Ganho de Peso</th>
 			</tr>
-				<tr><td><fmt:formatNumber minFractionDigits="2" maxFractionDigits="2" value="${ganhoDePeso}"/></td></tr>
+			<tr>
+				<td>Projeção de valor de venda para 30 dias: 
+					<fmt:formatNumber minFractionDigits="2" maxFractionDigits="2" value="${valorVenda30dias}"/>
+				</td>
+			</tr>
+			<tr><td>Projeção de valor de venda para 60 dias: 
+					<fmt:formatNumber minFractionDigits="2" maxFractionDigits="2" value="${valorVenda60dias}"/></td>
+			</tr>
 		</table>
 	</body>
 </html>

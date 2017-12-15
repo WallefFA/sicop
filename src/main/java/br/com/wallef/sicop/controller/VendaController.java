@@ -52,8 +52,8 @@ public class VendaController {
 	
 	@RequestMapping("geraRelatorioFuturo")
 	public String geraRelatorioFuturo(Model model) {
-		model.addAttribute("valorVenda", dao.calculaValorVenda());
-		model.addAttribute("ganhoDePeso", dao.calculaGanhoDePeso());
+		model.addAttribute("valorVenda30dias", dao.calculaValorVenda30dias());
+		model.addAttribute("valorVenda60dias", dao.calculaValorVenda60dias());
 		return "venda/relatorio-venda-futuro";
 	}
 }
