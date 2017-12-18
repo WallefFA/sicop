@@ -14,11 +14,11 @@
 				<th>Valor de Venda</th>
 			</tr>
 			<tr>
-				<td>Projeção de valor de venda para 30 dias: 
+				<td>Projeção de valor de venda para 30 dias: R$&nbsp;
 					<fmt:formatNumber minFractionDigits="2" maxFractionDigits="2" value="${valorVenda30dias}"/>
 				</td>
 			</tr>
-			<tr><td>Projeção de valor de venda para 60 dias: 
+			<tr><td>Projeção de valor de venda para 60 dias: R$&nbsp;
 					<fmt:formatNumber minFractionDigits="2" maxFractionDigits="2" value="${valorVenda60dias}"/></td>
 			</tr>
 		</table>
