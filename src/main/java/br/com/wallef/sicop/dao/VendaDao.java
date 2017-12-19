@@ -29,6 +29,13 @@ public class VendaDao {
 	public Venda seleciona() {
 		return (Venda) manager.createQuery("select v from Venda as v").getSingleResult();
 	}
+	
+	@SuppressWarnings("unchecked")
+	public int calculaTotalAnimais() {
+		List<Boi> bois = manager.createQuery("select b from Boi as b").getResultList();
+		
+		return bois.size();
+	}
 
 	@SuppressWarnings("unchecked")
 	public double calculaPesoMedio() {
@@ -69,12 +76,20 @@ public class VendaDao {
 		return pesoGanho / bois.size() / dias;
 	}
 	
+	public double calculaPesoMedio30dias() {	
+		return (calculaPesoMedio() + (calculaGanhoDePeso() * 30 * 0.9)/30);
+	}
+	
+	public double calculaPesoMedio60dias() {	
+		return (calculaPesoMedio() + (calculaGanhoDePeso() * 60 * 0.9)/30);
+	}
+	
 	@SuppressWarnings("unchecked")
 	public double calculaValorVenda30dias() {
 		List<Boi> bois = manager.createQuery("select b from Boi as b").getResultList();
 		Venda venda = (Venda) manager.createQuery("select v from Venda as v").getSingleResult();	
 		
-		return (calculaPesoMedio() + (calculaGanhoDePeso() * 30 * 0.9)/30) * bois.size() * venda.getCotacao30dias();
+		return calculaPesoMedio30dias() * bois.size() * venda.getCotacao30dias();
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -82,6 +97,6 @@ public class VendaDao {
 		List<Boi> bois = manager.createQuery("select b from Boi as b").getResultList();
 		Venda venda = (Venda) manager.createQuery("select v from Venda as v").getSingleResult();	
 		
-		return (calculaPesoMedio() + (calculaGanhoDePeso() * 60 * 0.8/30)) * bois.size() * venda.getCotacao60dias();
+		return calculaPesoMedio60dias() * bois.size() * venda.getCotacao60dias();
 	}
 }

@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstraptheme.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Animais Cadastrados</title>
 		
@@ -41,7 +42,7 @@
 		
 		<center><h3>Animais cadastrados</h3></center>
 		<br>
-
+		
 		<table class="table table-striped">
 			<tr>
 				<th>Id</th>
@@ -54,19 +55,18 @@
 			</tr>
 
 			<c:forEach items="${animais}" var="animal">
-				<tr>
 					<td>${animal.id }</td>
 					<td><fmt:formatDate value="${animal.dataEntrada.time}"
 						pattern="dd/MM/yyyy" /></td>
 					<td>${animal.pesoDeEntrada }</td>
 					<td>${animal.pesoAtual }</td>
 					<td>${animal.raca }</td>
-					<td><button type="button">Atualizar</button>
-					<a href="mostraAnimal?id=${animal.id }"></a></td>
+					<td>
+					<a href="mostraAnimal?id=${animal.id }"><button type="button">Atualizar</button></a></td>
 					<td><button type="button" class="btn btn-danger btn-sm">
-					<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+					<a href="excluiAnimal?id=${animal.id}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></a></span>
 					</button>
-					<a href="excluiAnimal?id=${animal.id}"></a></td>
+					</td>
 				</tr>
 
 			</c:forEach>

@@ -58,7 +58,7 @@
 				<div class="form-group">
 					<label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Raça:
 					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-					<input type="text" name="raca" class="form-control" placeholder="??? Kg"/>
+					<input type="text" name="raca" class="form-control" placeholder="Nelore"/>
 				</div><br><br><br>
 				<button type="submit" class="btn btn-primary">Cadastrar</button>
 			</form>

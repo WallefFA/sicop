@@ -35,6 +35,8 @@ public class VendaController {
 	@RequestMapping("geraRelatorio")
 	public String geraRelatorio(Model model) {
 		model.addAttribute("valorVenda", dao.calculaValorVenda());
+		model.addAttribute("pesoMedio", dao.calculaPesoMedio());
+		model.addAttribute("totalAnimais", dao.calculaTotalAnimais());
 		return "venda/relatorio-venda";
 	}
 	
@@ -54,6 +56,9 @@ public class VendaController {
 	public String geraRelatorioFuturo(Model model) {
 		model.addAttribute("valorVenda30dias", dao.calculaValorVenda30dias());
 		model.addAttribute("valorVenda60dias", dao.calculaValorVenda60dias());
+		model.addAttribute("pesoMedio30dias", dao.calculaPesoMedio30dias());
+		model.addAttribute("pesoMedio60dias", dao.calculaPesoMedio60dias());
+		model.addAttribute("totalAnimais", dao.calculaTotalAnimais());
 		return "venda/relatorio-venda-futuro";
 	}
 }

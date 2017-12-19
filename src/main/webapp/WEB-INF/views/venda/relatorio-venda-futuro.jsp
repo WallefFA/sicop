@@ -6,21 +6,64 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Relatório Futuro</title>
+		
+		<link rel="stylesheet" href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstraptheme.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<style>
+			body {
+			   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+			   background-color: #00FA9A;
+		
+			 }
+			nav {
+				background-color: white
+			}
+		</style>
 	</head>
 	<body>
-	
-		<table>
-			<tr>
-				<th>Valor de Venda</th>
-			</tr>
-			<tr>
-				<td>Projeção de valor de venda para 30 dias: R$&nbsp;
-					<fmt:formatNumber minFractionDigits="2" maxFractionDigits="2" value="${valorVenda30dias}"/>
-				</td>
-			</tr>
-			<tr><td>Projeção de valor de venda para 60 dias: R$&nbsp;
-					<fmt:formatNumber minFractionDigits="2" maxFractionDigits="2" value="${valorVenda60dias}"/></td>
-			</tr>
-		</table>
+		<div class="container">
+			<nav class="navbar navbar-light">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <a class="navbar-brand">SICOP</a>
+			    </div>
+			    <ul class="nav navbar-nav">
+				  <li><a href="home">Home</a></li> 
+			      <li><a href="listaAnimais">Animais Cadastrados</a></li>
+				  <li><a href="novoAnimal">Cadastrar Animais</a></li>
+				  <li><a href="relatorios">Relatórios</a></li>
+			    </ul>
+			  </div>
+			</nav>
+			
+			<table class="table table-striped">
+				<tr>
+					<th>-</th>
+					<th>-</th>
+				</tr>
+				<tr>
+					<td>Total de Animais:</td>
+					<td>${totalAnimais}</td>
+				</tr>
+				<tr>
+					<td>Peso Médio p/ Animal: (30 dias)</td>
+					<td><fmt:formatNumber minFractionDigits="2" maxFractionDigits="2" value="${pesoMedio30dias}"/>@</td>
+				</tr>
+								<tr>
+					<td>Peso Médio p/ Animal: (60 dias)</td>
+					<td><fmt:formatNumber minFractionDigits="2" maxFractionDigits="2" value="${pesoMedio60dias}"/>@</td>
+				</tr>
+				<tr>
+					<td>Projeção de valor de venda para 30 dias:</td>
+					<td>R$ &nbsp<fmt:formatNumber minFractionDigits="2" maxFractionDigits="2" value="${valorVenda30dias}"/></td>
+				</tr>
+				<tr>
+					<td>Projeção de valor de venda para 60 dias:</td>
+					<td>R$ &nbsp<fmt:formatNumber minFractionDigits="2" maxFractionDigits="2" value="${valorVenda60dias}"/></td>
+				</tr>
+			</table>
+		</div>
 	</body>
 </html>
