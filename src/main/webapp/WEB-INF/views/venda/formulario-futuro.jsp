@@ -44,15 +44,35 @@
 					
 			<h3>Novo Relatório Futuro</h3>
 			<br>
-			<form action="atualizaVendaFuturo" method="post" >
+			<form class="form-inline" action="atualizaVendaFuturo" method="post" >
 				<input type="hidden" name="id" value="${venda.id}"/>
-				Data da Pesagem: <input type="text" name="dataVenda"/ placeholder="Dia/Mês/Ano"><br><br>
-				&nbsp Data de Entrada:&nbsp <input type="text" name="dataEntrada" 
-				<fmt:formatDate value="${venda.dataEntrada.time}" pattern="dd/MM/yyyy"/> placeholder="Dia/Mês/Ano"/>
-				<input type="hidden" name="cotacao" value="${venda.cotacao}"/><br><br> 
-				Cotação (30 dias): <input type="text" name="cotacao30dias"/ placeholder="R$ ###,##"><br><br>
-				Cotação (60 dias): <input type="text" name="cotacao60dias"/ placeholder="R$ ###,##"><br><br>
 				
+				<div class="form-group">
+					<label>Data da Pesagem: </label>
+					<input class="form-control" type="text" name="dataVenda"/ placeholder="Dia/Mês/Ano"><br><br>
+				</div>
+				<br>
+				<div class="form-group">
+					<label>&nbsp Data de Entrada:&nbsp </label>
+					<input class="form-control" type="text" name="dataEntrada" 
+					<fmt:formatDate value="${venda.dataEntrada.time}" pattern="dd/MM/yyyy"/> placeholder="Dia/Mês/Ano"/>
+				</div>
+				<input type="hidden" name="cotacao" value="${venda.cotacao}"/><br><br> 
+				<div class="form-group">
+					<label>Cotação (30 dias): </label>
+					<input class="form-control" type="text" name="cotacao30dias"/ placeholder="R$ ###,##">
+				</div>
+				<br><br>		
+				<div class="form-group">
+					<label>Cotação (60 dias): </label>
+					<input class="form-control" type="text" name="cotacao60dias"/ placeholder="R$ ###,##">
+				</div>
+				<br><br>
+				<div class="form-group">
+					<label>Estimativa de Rendimento (%):</label>
+					<input class="form-control" type="text" name="rendimento" placeholder="##%">
+				</div>
+				<br><br>
 				<button type="submit" class="btn btn-warning">Gerar Relatório</button>
 			</form>
 			

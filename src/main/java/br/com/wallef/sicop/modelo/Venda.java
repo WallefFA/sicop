@@ -15,6 +15,33 @@ public class Venda {
 
 	@Id
 	private int id;
+
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern="dd/MM/yyyy")
+	private Calendar dataVenda;
+	
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern="dd/MM/yyyy")
+	private Calendar dataEntrada;
+	
+	@NotNull
+	private double cotacao;
+	@NotNull
+	private double cotacao30dias;
+	@NotNull
+	private double cotacao60dias;
+
+	@NotNull
+	private double rendimento;
+	
+	
+	public double getRendimento() {
+		return rendimento;
+	}
+
+	public void setRendimento(double rendimento) {
+		this.rendimento = rendimento;
+	}
 	
 	public int getId() {
 		return id;
@@ -31,22 +58,6 @@ public class Venda {
 	public void setDataEntrada(Calendar dataEntrada) {
 		this.dataEntrada = dataEntrada;
 	}
-
-	@Temporal(TemporalType.DATE)
-	@DateTimeFormat(pattern="dd/MM/yyyy")
-	private Calendar dataVenda;
-	
-	@Temporal(TemporalType.DATE)
-	@DateTimeFormat(pattern="dd/MM/yyyy")
-	private Calendar dataEntrada;
-	
-	@NotNull
-	private double cotacao;
-	@NotNull
-	private double cotacao30dias;
-	@NotNull
-	private double cotacao60dias;
-	
 	
 	public Calendar getDataVenda() {
 		return dataVenda;

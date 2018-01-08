@@ -53,6 +53,11 @@
 					<input type="hidden" name="cotacao30dias" value="${venda.cotacao30dias}"/>
 					<input type="hidden" name="cotacao60dias" value="${venda.cotacao60dias}"/>
 					<br><br>
+					<div class="form-group">
+						<label>Estimativa de Rendimento (%):</label>
+						<input class="form-control" type="text" name="rendimento" placeholder="##%"/>
+					</div>
+					<br><br>
 					<button type="submit" class="btn btn-warning">Gerar Relatório</button>
 				</form>
 			</center>

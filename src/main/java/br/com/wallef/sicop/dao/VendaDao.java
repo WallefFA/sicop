@@ -55,7 +55,7 @@ public class VendaDao {
 		List<Boi> bois = manager.createQuery("select b from Boi as b").getResultList();
 		Venda venda = (Venda) manager.createQuery("select v from Venda as v").getSingleResult();
 
-		return calculaPesoMedio() * bois.size() * venda.getCotacao();
+		return (calculaPesoMedio() * (venda.getRendimento()/100)) * bois.size() * venda.getCotacao();
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -89,7 +89,7 @@ public class VendaDao {
 		List<Boi> bois = manager.createQuery("select b from Boi as b").getResultList();
 		Venda venda = (Venda) manager.createQuery("select v from Venda as v").getSingleResult();	
 		
-		return calculaPesoMedio30dias() * bois.size() * venda.getCotacao30dias();
+		return (calculaPesoMedio30dias() * (venda.getRendimento()/100)) * bois.size() * venda.getCotacao30dias();
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -97,6 +97,6 @@ public class VendaDao {
 		List<Boi> bois = manager.createQuery("select b from Boi as b").getResultList();
 		Venda venda = (Venda) manager.createQuery("select v from Venda as v").getSingleResult();	
 		
-		return calculaPesoMedio60dias() * bois.size() * venda.getCotacao60dias();
+		return (calculaPesoMedio60dias() * (venda.getRendimento()/100)) * bois.size() * venda.getCotacao60dias();
 	}
 }
