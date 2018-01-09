@@ -49,28 +49,28 @@
 				
 				<div class="form-group">
 					<label>Data da Pesagem: </label>
-					<input class="form-control" type="text" name="dataVenda"/ placeholder="Dia/Mês/Ano"><br><br>
+					<input class="form-control" type="text" name="dataVenda"/ placeholder="Dia/Mês/Ano" required="required"><br><br>
 				</div>
 				<br>
 				<div class="form-group">
 					<label>&nbsp Data de Entrada:&nbsp </label>
 					<input class="form-control" type="text" name="dataEntrada" 
-					<fmt:formatDate value="${venda.dataEntrada.time}" pattern="dd/MM/yyyy"/> placeholder="Dia/Mês/Ano"/>
+					<fmt:formatDate value="${venda.dataEntrada.time}" pattern="dd/MM/yyyy"/> placeholder="Dia/Mês/Ano" required="required"/>
 				</div>
 				<input type="hidden" name="cotacao" value="${venda.cotacao}"/><br><br> 
 				<div class="form-group">
 					<label>Cotação (30 dias): </label>
-					<input class="form-control" type="text" name="cotacao30dias"/ placeholder="R$ ###,##">
+					<input class="form-control" type="number" name="cotacao30dias"/ placeholder="R$ ###,##" required="required">
 				</div>
 				<br><br>		
 				<div class="form-group">
 					<label>Cotação (60 dias): </label>
-					<input class="form-control" type="text" name="cotacao60dias"/ placeholder="R$ ###,##">
+					<input class="form-control" type="number" name="cotacao60dias"/ placeholder="R$ ###,##" required="required">
 				</div>
 				<br><br>
 				<div class="form-group">
 					<label>Estimativa de Rendimento (%):</label>
-					<input class="form-control" type="text" name="rendimento" placeholder="##%">
+					<input class="form-control" type="number" name="rendimento" placeholder="##%" required="required">
 				</div>
 				<br><br>
 				<button type="submit" class="btn btn-warning">Gerar Relatório</button>

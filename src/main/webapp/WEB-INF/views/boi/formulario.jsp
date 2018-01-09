@@ -45,20 +45,20 @@
 			<form class="form-inline" action="cadastraAnimal" method="post">
 				<div class="form-group">
 					<label>Data de Entrada:</label>
-					<input type="text" name="dataEntrada" class="form-control" placeholder="Dia/Mês/Ano"/>
+					<input type="text" name="dataEntrada" class="form-control" placeholder="Dia/Mês/Ano" required="required"/>
 				</div><br><br>
 				<div class="form-group">
 					<label>Peso de Entrada:</label>
-					<input type="text" name="pesoDeEntrada" class="form-control" placeholder="??? Kg"/>
+					<input type="number" name="pesoDeEntrada" class="form-control" placeholder="??? Kg" required="required"/>
 				</div><br><br>
 				<div class="form-group">
 					<label>&nbsp&nbsp &nbsp&nbspPeso Atual: &nbsp&nbsp&nbsp</label>
-					<input type="text" name="pesoAtual" class="form-control" placeholder="??? Kg"/>
+					<input type="number" name="pesoAtual" class="form-control" placeholder="??? Kg" required="required"/>
 				</div><br><br>
 				<div class="form-group">
 					<label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Raça:
 					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-					<input type="text" name="raca" class="form-control" placeholder="Nelore"/>
+					<input type="text" name="raca" class="form-control" placeholder="Nelore" required="required"/>
 				</div><br><br><br>
 				<button type="submit" class="btn btn-primary">Cadastrar</button>
 			</form>

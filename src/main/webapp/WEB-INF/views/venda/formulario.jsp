@@ -48,14 +48,14 @@
 					<input type="hidden" name="dataEntrada"  <fmt:formatDate value="${venda.dataEntrada.time }" pattern="dd/MM/yyyyy"/> />
 					<div class="form-group">
 						<label>Cotação: (Hoje)</label>
-						<input class="form-control" type="text" name="cotacao"/ placeholder="R$ ###,##"><br>
+						<input class="form-control" type="number" name="cotacao"/ placeholder="R$ ###,##" required="required"><br>
 					</div> 
 					<input type="hidden" name="cotacao30dias" value="${venda.cotacao30dias}"/>
 					<input type="hidden" name="cotacao60dias" value="${venda.cotacao60dias}"/>
 					<br><br>
 					<div class="form-group">
 						<label>Estimativa de Rendimento (%):</label>
-						<input class="form-control" type="text" name="rendimento" placeholder="##%"/>
+						<input class="form-control" type="number" name="rendimento" placeholder="##%" required="required"/>
 					</div>
 					<br><br>
 					<button type="submit" class="btn btn-warning">Gerar Relatório</button>
