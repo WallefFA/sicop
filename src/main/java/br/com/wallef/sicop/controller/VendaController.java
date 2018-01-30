@@ -13,21 +13,21 @@ public class VendaController {
 
 	@Autowired
 	VendaDao dao;
-	
+
 	@RequestMapping("relatorios")
 	public String relatorios(Model model) {
 		model.addAttribute("venda", dao.seleciona());
 		return "venda/relatorios";
 	}
-	
+
 	@RequestMapping("mostraVenda")
 	public String mostra(int id, Model model) {
 		model.addAttribute("venda", dao.buscaPorId(id));
 		return "venda/formulario";
 	}
-	
+
 	@RequestMapping("atualizaVenda")
-	public String atualiza( Venda venda) {
+	public String atualiza(Venda venda) {
 		dao.atualiza(venda);
 		return "redirect:geraRelatorio";
 	}
@@ -39,19 +39,19 @@ public class VendaController {
 		model.addAttribute("totalAnimais", dao.calculaTotalAnimais());
 		return "venda/relatorio-venda";
 	}
-	
+
 	@RequestMapping("mostraVendaFuturo")
 	public String mostraFuturo(int id, Model model) {
 		model.addAttribute("venda", dao.buscaPorId(id));
 		return "venda/formulario-futuro";
 	}
-	
+
 	@RequestMapping("atualizaVendaFuturo")
-	public String atualizaFutura( Venda venda) {
+	public String atualizaFutura(Venda venda) {
 		dao.atualiza(venda);
 		return "redirect:geraRelatorioFuturo";
 	}
-	
+
 	@RequestMapping("geraRelatorioFuturo")
 	public String geraRelatorioFuturo(Model model) {
 		model.addAttribute("valorVenda30dias", dao.calculaValorVenda30dias());

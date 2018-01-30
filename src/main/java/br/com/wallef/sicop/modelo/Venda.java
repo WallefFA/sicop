@@ -17,13 +17,13 @@ public class Venda {
 	private int id;
 
 	@Temporal(TemporalType.DATE)
-	@DateTimeFormat(pattern="dd/MM/yyyy")
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Calendar dataVenda;
-	
+
 	@Temporal(TemporalType.DATE)
-	@DateTimeFormat(pattern="dd/MM/yyyy")
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Calendar dataEntrada;
-	
+
 	@NotNull
 	private double cotacao;
 	@NotNull
@@ -33,8 +33,7 @@ public class Venda {
 
 	@NotNull
 	private double rendimento;
-	
-	
+
 	public double getRendimento() {
 		return rendimento;
 	}
@@ -42,7 +41,7 @@ public class Venda {
 	public void setRendimento(double rendimento) {
 		this.rendimento = rendimento;
 	}
-	
+
 	public int getId() {
 		return id;
 	}
@@ -58,7 +57,7 @@ public class Venda {
 	public void setDataEntrada(Calendar dataEntrada) {
 		this.dataEntrada = dataEntrada;
 	}
-	
+
 	public Calendar getDataVenda() {
 		return dataVenda;
 	}
@@ -66,7 +65,7 @@ public class Venda {
 	public void setDataVenda(Calendar dataVenda) {
 		this.dataVenda = dataVenda;
 	}
-	
+
 	public double getCotacao() {
 		return cotacao;
 	}
