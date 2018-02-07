@@ -15,9 +15,9 @@
 						http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
 	   					http://www.springframework.org/schema/data/jpa
 						http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
-
+	
 	<jpa:repositories base-package="br.com.wallef.sicop" />
-
+	
 	<context:component-scan base-package="br.com.wallef.sicop" />
 	<mvc:annotation-driven />
 	
@@ -48,6 +48,6 @@
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory"/>
 	</bean>  
-	
+	<!-- Annotation @Transactional -->
 	<tx:annotation-driven/>
 </beans>
