@@ -17,7 +17,6 @@ public class BoiDao {
 
 	public void cadastra(Boi boi) {
 		manager.persist(boi);
-		
 	}
 
 	public void atualiza(Boi boi) {
