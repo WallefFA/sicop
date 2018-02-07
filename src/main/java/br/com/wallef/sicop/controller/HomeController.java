@@ -10,4 +10,10 @@ public class HomeController {
 	public String home() {
 		return "index";
 	}
+	
+	@RequestMapping("entrar")
+	public String entrar() {
+		return "entrar";
+	}
+
 }

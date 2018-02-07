@@ -60,17 +60,17 @@
 				<input type="hidden" name="cotacao" value="${venda.cotacao}"/><br><br> 
 				<div class="form-group">
 					<label>Cotação (30 dias): </label>
-					<input class="form-control" type="number" name="cotacao30dias"/ placeholder="R$ ###,##" required="required">
+					<input class="form-control" name="cotacao30dias"/ placeholder="R$ ###,##" required="required">
 				</div>
 				<br><br>		
 				<div class="form-group">
 					<label>Cotação (60 dias): </label>
-					<input class="form-control" type="number" name="cotacao60dias"/ placeholder="R$ ###,##" required="required">
+					<input class="form-control" name="cotacao60dias"/ placeholder="R$ ###,##" required="required">
 				</div>
 				<br><br>
 				<div class="form-group">
 					<label>Estimativa de Rendimento (%):</label>
-					<input class="form-control" type="number" name="rendimento" placeholder="##%" required="required">
+					<input class="form-control" name="rendimento" placeholder="##%" required="required">
 				</div>
 				<br><br>
 				<button type="submit" class="btn btn-warning">Gerar Relatório</button>

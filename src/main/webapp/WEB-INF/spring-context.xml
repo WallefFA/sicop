@@ -20,6 +20,7 @@
 
 	<context:component-scan base-package="br.com.wallef.sicop" />
 	<mvc:annotation-driven />
+	
 	<mvc:default-servlet-handler/>
 
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -47,5 +48,6 @@
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory"/>
 	</bean>  
+	
 	<tx:annotation-driven/>
 </beans>

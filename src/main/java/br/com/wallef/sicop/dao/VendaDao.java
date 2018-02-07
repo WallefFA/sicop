@@ -6,13 +6,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import br.com.wallef.sicop.modelo.Boi;
 import br.com.wallef.sicop.modelo.Venda;
 
 @Repository
-@Transactional
+
 public class VendaDao {
 
 	@PersistenceContext

@@ -35,7 +35,8 @@
 			  <li><a href="home">Home</a></li> 
 		      <li><a href="listaAnimais">Animais Cadastrados</a></li>
 			  <li><a href="novoAnimal">Cadastrar Animais</a></li>
-			  <li><a href="relatorios">Relatórios</a></li>
+			  <li><a href="GERENTE/relatorios">Relatórios</a></li>
+			  
 		    </ul>
 		  </div>
 		</nav>
@@ -53,8 +54,9 @@
 				<th></th>
 				<th></th>
 			</tr>
-
+			
 			<c:forEach items="${animais}" var="animal">
+				<tr>
 					<td>${animal.id }</td>
 					<td><fmt:formatDate value="${animal.dataEntrada.time}"
 						pattern="dd/MM/yyyy" /></td>

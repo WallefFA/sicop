@@ -45,7 +45,7 @@
 					
 					<div class="form-group">
 						<label>Peso Atual:</label>
-						<input type="number" name="pesoAtual" class="form-control" placeholder="??? Kg" value="${animal.pesoAtual }" required="required"/>
+						<input name="pesoAtual" class="form-control" placeholder="??? Kg" value="${animal.pesoAtual }" required="required"/>
 					</div>
 					
 					<input type="hidden" name="id" value="${animal.id }"/>

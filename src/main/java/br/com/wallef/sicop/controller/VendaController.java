@@ -2,6 +2,7 @@ package br.com.wallef.sicop.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -9,6 +10,7 @@ import br.com.wallef.sicop.dao.VendaDao;
 import br.com.wallef.sicop.modelo.Venda;
 
 @Controller
+@Transactional
 public class VendaController {
 
 	@Autowired

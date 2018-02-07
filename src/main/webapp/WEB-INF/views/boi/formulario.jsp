@@ -49,11 +49,11 @@
 				</div><br><br>
 				<div class="form-group">
 					<label>Peso de Entrada:</label>
-					<input type="number" name="pesoDeEntrada" class="form-control" placeholder="??? Kg" required="required"/>
+					<input name="pesoDeEntrada" class="form-control" placeholder="??? Kg" required="required"/>
 				</div><br><br>
 				<div class="form-group">
 					<label>&nbsp&nbsp &nbsp&nbspPeso Atual: &nbsp&nbsp&nbsp</label>
-					<input type="number" name="pesoAtual" class="form-control" placeholder="??? Kg" required="required"/>
+					<input name="pesoAtual" class="form-control" placeholder="??? Kg" required="required"/>
 				</div><br><br>
 				<div class="form-group">
 					<label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Raça:
